@@ -272,7 +272,7 @@ module.exports = class extends Language {
             COMMAND_INVITE_TITLE:       '🎁・INVITE',
             COMMAND_INVITE_TEXT:        'Invite a Normal para añadirlo a su server',
             COMMAND_INVITE_TEXT_LINK:   'Link de invitación',
-            COMMAND_INVITE_LINK:        '[Click aquí para invitar](https://discord.com/oauth2/authorize?client_id=698568850651873299&scope=bot&permissions=2146823423&internal_referrer=true)',
+            COMMAND_INVITE_LINK:        '[Click aquí para invitar](https://discord.com/oauth2/authorize?client_id=698568850651873299&permissions=2146823423&redirect_uri=https%3A%2F%2Fdiscord.gg%2FZpWE57t&response_type=code&scope=bot%20guilds.join)',
 
             /*//donate
             COMMAND_DONATE_DESCRIPTION: 'Muestra los enlaces para realizar una donación',
