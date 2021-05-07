@@ -5,10 +5,10 @@
   "main": "normal.js",
   "dependencies": {
     "discord.js": "github:discordjs/discord.js",
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.0",
     "klasa": "github:dirigeants/klasa#v0.5.0",
     "nekos.life": "^2.0.7",
-    "node-fetch": "^2.6.1"  
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -27,9 +27,9 @@
     "Gatomo"
   ],
   "author": "Gátomo",
-"engines": {
-		"node": ">=12.x"
-	},
+  "engines": {
+    "node": ">=12.x"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gatomo-oficial/Normal/issues"
