@@ -1,4 +1,4 @@
-import {Command}  from '../../types';
+import { Command } from '../../types';
 
 export const command: Command = {
     name: 'ping',

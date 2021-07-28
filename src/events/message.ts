@@ -6,16 +6,19 @@ export const event: Event = {
     run: async (client: any, msg: Message) => {
         try {
             // Prevenir bots, webhooks o cualquier mensaje que no tenga el prefix
-            if ( msg.author.bot || msg.webhookID || !msg.content.startsWith(client.config.prefix)) return;
+            if (msg.author.bot || msg.webhookID || !msg.content.startsWith(client.config.prefix)) return;
 
+            // Definir argumentos y eso
             const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g);
             const cmd = args.shift()?.toLowerCase();
 
             if (!cmd) return;
             const command = client.commands.get(cmd) || client.aliases.get(cmd);
-            if (command){
+            if (command) {
                 (command as Command).run(client, msg, args);
             }
+
+            
         } catch (err) {
             console.error(err);
         }

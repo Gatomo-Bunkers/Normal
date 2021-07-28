@@ -27,7 +27,7 @@ export default class extClient extends Client {
 		token: process.env.TOKEN || '',
 		// Tengo que poner el || '' porque si no me salta el error TS2322 ya
 		// que la variable de entorno TOKEN puede ser undefined
-		mongoURI: undefined,
+		mongoURI: process.env.MONGO_URI,
 		dev: '685947556655923242'
 	}
 
@@ -60,7 +60,7 @@ export default class extClient extends Client {
 					this.commands.set(command.name, command);
 
 					// Configurar alias
-					if(typeof command.aliases !== 'undefined'){
+					if (typeof command.aliases !== 'undefined') {
 						if (command.aliases.length !== 0) {
 							command.aliases.forEach((alias: string) => { this.aliases.set(alias, command) });
 						}
