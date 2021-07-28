@@ -9,7 +9,12 @@ export const event: Event = {
             if (msg.author.bot || msg.webhookID || !msg.content.startsWith(client.config.prefix)) return;
 
             // Definir argumentos y eso
-            const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g);
+            //if(!client.commands.spaceSplit || typeof client.commands.spaceSplit == 'undefined'){
+                var args = msg.content.slice(client.config.prefix.length).trim().split(','); // Dividir argumentos con coma
+           /* } else {
+                var args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g); // Dividir argumentos con espacio
+            }*/
+
             const cmd = args.shift()?.toLowerCase();
 
             if (!cmd) return;

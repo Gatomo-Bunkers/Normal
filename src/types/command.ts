@@ -15,7 +15,8 @@ export type Command = {
 	description?: string,
 	aliases?: string[],
 	enabled?: boolean,
-	args?: boolean
+	args?: boolean,
+	spaceSplit?: boolean,
 	usage?: string,
 	cooldown?: number,
 	guildOnly?: boolean
