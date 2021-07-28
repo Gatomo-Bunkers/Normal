@@ -12,12 +12,12 @@ export const event: Event = {
             const cmd = args.shift()?.toLowerCase();
 
             if (!cmd) return;
-            const command = client.commands.get(cmd) || client.aliases.get(cmd)
+            const command = client.commands.get(cmd) || client.aliases.get(cmd);
             if (command){
-                (command as Command).run(client, msg, args)
+                (command as Command).run(client, msg, args);
             }
         } catch (err) {
-            console.error(err)
+            console.error(err);
         }
     }
 }
