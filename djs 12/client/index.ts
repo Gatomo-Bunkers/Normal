@@ -15,10 +15,10 @@ require('dotenv').config();
 
 // Clase extClient (extended CLient)
 export default class extClient extends Client {
-	// Crear colecciones para comandos, eventos, aliases y cooldown
+	// Crear colecciones para comandos, eventos, aliases y inhibidores
 	public commands: Collection<string, Command> = new Collection();
 	public aliases: Collection<string, Command> = new Collection();
-	public cooldown: Collection<string, Command> = new Collection();
+	public cooldowns: Collection<string, Command> = new Collection();
 	public events: Collection<string, Event> = new Collection();
 
 	// Configurar el bot
@@ -78,7 +78,7 @@ export default class extClient extends Client {
 				// Configurar eventos y hacerlos funcionar
 				this.events.set(event.name, event);
 				this.on(event.name, event.run.bind(null, this))
-			});
+			});		
 
 		} catch (err) {
 			console.error(err)
